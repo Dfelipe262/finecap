@@ -11,6 +11,12 @@
   .inicio2 {
     width: 900px;
   }
+
+  .messages{
+    color:white;
+    display: flex;
+    justify-content: center;
+  }
 </style>
 {% endblock %}
 
@@ -27,7 +33,7 @@
       {% if messages %}
       <ul class="messages">
         {% for message in messages %}
-        <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+        <li>{{ message }}</li>
         {% endfor %}
       </ul>
       {% endif %}
